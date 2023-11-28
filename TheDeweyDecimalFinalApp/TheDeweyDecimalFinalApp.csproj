@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AD182C94-11FE-4ED0-ABBA-567BC9712499}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TheDeweyDecimalFinalApp</RootNamespace>
+    <AssemblyName>TheDeweyDecimalFinalApp</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="RandomNumber">
+      <HintPath>..\..\RandomNumber\RandomNumber\bin\Debug\RandomNumber.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DewyNode.cs" />
+    <Compile Include="FindingCallNumbers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindingCallNumbers.Designer.cs">
+      <DependentUpon>FindingCallNumbers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindingCallNumbersReverse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindingCallNumbersReverse.Designer.cs">
+      <DependentUpon>FindingCallNumbersReverse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IdentifyingAreas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IdentifyingAreas.Designer.cs">
+      <DependentUpon>IdentifyingAreas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReplacingBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReplacingBooks.Designer.cs">
+      <DependentUpon>ReplacingBooks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReverseIdentifyingAreas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReverseIdentifyingAreas.Designer.cs">
+      <DependentUpon>ReverseIdentifyingAreas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StartPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartPage.Designer.cs">
+      <DependentUpon>StartPage.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FindingCallNumbers.resx">
+      <DependentUpon>FindingCallNumbers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindingCallNumbersReverse.resx">
+      <DependentUpon>FindingCallNumbersReverse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IdentifyingAreas.resx">
+      <DependentUpon>IdentifyingAreas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ReplacingBooks.resx">
+      <DependentUpon>ReplacingBooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReverseIdentifyingAreas.resx">
+      <DependentUpon>ReverseIdentifyingAreas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartPage.resx">
+      <DependentUpon>StartPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\library-libraries-feature-700x375-1.jpg.optimal.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thebook.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\score.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\booksshelf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oneBook.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
